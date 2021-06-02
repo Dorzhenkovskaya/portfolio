@@ -90,6 +90,14 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        a {
+            &:hover {
+                svg path {
+                    fill: #fff;
+                    transition: all .6s;
+                }
+            }
+        }
     }
     &__overlay {
         position: fixed;

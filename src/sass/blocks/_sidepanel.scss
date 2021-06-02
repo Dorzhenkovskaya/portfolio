@@ -22,4 +22,12 @@
             width: 150px;
         }
     }
+    a {
+        &:hover {
+            svg path {
+                fill: $main-color;
+                transition: all .6s;
+            }
+        }
+    }
 }
