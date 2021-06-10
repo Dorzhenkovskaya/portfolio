@@ -105,4 +105,11 @@
         font-size: 14px;
         line-height: 21px;
     }
+    .error {
+        border: 1px solid red;
+    }
+    label.error {
+        border: none;
+        margin-bottom: 10px;
+    }
 }

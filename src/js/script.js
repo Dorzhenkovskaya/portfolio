@@ -33,3 +33,33 @@ $("a[href^='#']").click(function(){
 });
 
 new WOW().init();
+
+//Validate form
+$('#contacts-form').validate({
+    rules: {
+        name: "required",
+        email: {
+            required: true,
+            email: true
+        },
+        text: {
+            required: true,
+            minlength: 5
+        },
+        checkbox_policy: {
+            required: true
+        }
+    },
+    messages: {
+        name: " ",
+        email: {
+            required: " ",
+            email: " "
+        },
+        text: {
+            required: " ",
+            minlength: jQuery.validator.format(" ")
+        },
+        checkbox_policy: "Необходимо ваше согласие с политикой конфиденциальности"
+    }
+});
