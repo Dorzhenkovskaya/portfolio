@@ -60,7 +60,7 @@ $('#contacts-form').validate({
             required: " ",
             minlength: jQuery.validator.format(" ")
         },
-        checkbox_policy: "Необходимо ваше согласие с политикой конфиденциальности"
+        checkbox_policy: " "
     }
 });
 
@@ -68,3 +68,20 @@ $('#contacts-form').validate({
 $('.modal__close').on('click', function() {
 $('.overlay, #thanks').fadeOut('slow');
 });
+
+// Обработка форм
+$('form').submit(function(e) {
+    // Отмена стандартного поведения браузера
+    e.preventDefault();
+    //Отправка данных на сервер
+    $.ajax({
+      type: "POST",
+      url: "mailer/smart.php",
+      data: $(this).serialize()
+    }).done(function() {
+      $(this).find("input").val("");
+      $('.overlay, #thanks').fadeIn('slow');
+      $('form').trigger('reset');
+    });
+    return false;
+  });
