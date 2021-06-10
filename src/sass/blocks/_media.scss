@@ -129,6 +129,22 @@
             line-height: 16px;
         }
     }
+    .overlay {
+        .modal {
+            width: 350px;
+            min-height: 350px;
+            &__subtitle {
+                font-size: 16px;
+            }
+            &__descr {
+                font-size: 13px;
+                margin-top: 12px;
+            }
+            &_mini {
+                min-height: 100px;
+            }
+        }
+    }
 }
 
 @media(max-width: 768px) {
@@ -212,6 +228,11 @@
             grid-template: 45px 190px 45px / repeat(2, 250px);
         }
     }
+    .overlay {
+        .modal {
+            width: 340px;
+        }
+    }
 }
 
 @media(max-width: 576px) {
@@ -293,6 +314,21 @@
             width: 180px;
             margin: 0 auto;
             line-height: 18px;
+        }
+    }
+    .overlay {
+        .modal {
+            width: 290px;
+            &__subtitle {
+                font-size: 14px;
+            }
+            &__descr {
+                font-size: 11px;
+            }
+            &__close {
+                top: 7px;
+                right: 10px;
+            }
         }
     }
 }
