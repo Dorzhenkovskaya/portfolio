@@ -63,3 +63,8 @@ $('#contacts-form').validate({
         checkbox_policy: "Необходимо ваше согласие с политикой конфиденциальности"
     }
 });
+
+// Modal
+$('.modal__close').on('click', function() {
+$('.overlay, #thanks').fadeOut('slow');
+});

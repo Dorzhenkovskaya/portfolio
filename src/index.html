@@ -451,7 +451,7 @@
                             <label for="text">Ваше сообщение</label>
                         </div>
                         <div class="contacts__triggers">
-                            <button class="contacts__btn btn">Отправить сообщение</button>
+                            <button data-modal="contacts" class="contacts__btn btn">Отправить сообщение</button>
                             <div class="contacts__policy">
                                 <input name='checkbox_policy' type="checkbox">
                                 <span>Я согласен(а) с <a href="/policy.html">политикой конфиденциальности</a></span>
@@ -462,6 +462,14 @@
             </div>
         </div>
     </section>
+
+    <div class="overlay">
+        <div class="modal modal_mini" id="thanks">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Спасибо за ваше сообщение!</div>
+            <div class="modal__descr">Я свяжусь с вами в ближайшее время!</div>
+        </div>
+    </div>
 
     <a href="#up" class="pageup">
         <img src="icons/up.svg" alt="up">
